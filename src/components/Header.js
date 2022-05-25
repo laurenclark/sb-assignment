@@ -3,6 +3,7 @@ import { css } from "styled-components/macro";
 
 function Header() {
     const HeaderStyles = css`
+        margin-top: 20px;
         h1,
         h3 {
             font-weight: 300;
