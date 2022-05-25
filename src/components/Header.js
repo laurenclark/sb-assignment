@@ -6,7 +6,7 @@ function Header() {
             <h1>ALL CLOTHING</h1>
             <h3>
                 Discover Sweaty Betty's range of beautiful, technical
-                bum-sculpting leggings, yoga pants, jumper: sports bras & more.
+                bum-sculpting leggings, yoga pants, jumpers sports bras & more.
                 Shop Sweaty betty now!
             </h3>
         </div>
