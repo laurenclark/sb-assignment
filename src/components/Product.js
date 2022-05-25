@@ -15,8 +15,8 @@ const ProductImage = styled.img`
     max-width: 100%;
     margin: 0 auto;
     object-fit: contain;
-    height: 300px;
-    width: 150px;
+    height: 350px;
+    width: 200px;
     @media (min-width: 768px) {
         height: 500px;
         width: 300px;
@@ -26,7 +26,7 @@ const ProductImage = styled.img`
 const ProductDescription = styled.div`
     margin-top: 20px;
     line-height: 1.2;
-
+    min-height: 130px;
     h4,
     p {
         margin-bottom: 15px;
@@ -51,8 +51,8 @@ export default function Product({ title, description, image, category }) {
                     <Favourite />
                 </h4>
                 <p>{description}</p>
-                <p>{category}</p>
             </ProductDescription>
+            <p>{category[0].toUpperCase() + category.slice(1)}</p>
         </ProductItem>
     );
 }
