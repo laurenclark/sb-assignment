@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { IoIosHeartEmpty } from "react-icons/io";
+import Favourite from "./Favourite";
 
 const ProductItem = styled.li`
     width: 42%;
@@ -37,14 +36,8 @@ const ProductDescription = styled.div`
     }
     h4 {
         display: block;
-        padding-right: 60px;
+        padding-right: 40px;
         position: relative;
-        span {
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 20px;
-        }
     }
 `;
 
@@ -55,9 +48,7 @@ export default function Product({ title, description, image, category }) {
             <ProductDescription>
                 <h4>
                     <strong>{title}</strong>
-                    <span>
-                        <IoIosHeartEmpty />
-                    </span>
+                    <Favourite />
                 </h4>
                 <p>{description}</p>
                 <p>{category}</p>
