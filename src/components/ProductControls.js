@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import ProductPagination from "./ProductPagination";
 
+import PropTypes from "prop-types";
+
 const ProductControlBar = styled.section`
     border-top: 1px solid #888;
     border-bottom: 1px solid #888;
@@ -36,3 +38,8 @@ export default function ProductControls({ resultsPerPage, maxResults }) {
         </ProductControlBar>
     );
 }
+
+ProductControls.propTypes = {
+    resultsPerPage: PropTypes.string,
+    maxResults: PropTypes.string
+};

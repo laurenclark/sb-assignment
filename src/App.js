@@ -40,7 +40,7 @@ export default function App() {
             <Header />
             <ProductControls
                 resultsPerPage={limit}
-                maxResults={response?.length}
+                maxResults={String(response?.length)}
             />
             <main>
                 {error && (

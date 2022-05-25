@@ -1,6 +1,8 @@
 import { ProductItem, ProductImage, ProductDescription } from "./ProductStyles";
 import Favourite from "./Favourite";
 
+import PropTypes from "prop-types";
+
 export default function Product({ title, description, image, category }) {
     return (
         <ProductItem>
@@ -16,3 +18,10 @@ export default function Product({ title, description, image, category }) {
         </ProductItem>
     );
 }
+
+Product.propTypes = {
+    title: PropTypes.string,
+    image: PropTypes.string,
+    description: PropTypes.string,
+    category: PropTypes.string
+};
