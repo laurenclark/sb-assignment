@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 const ProductItem = styled.li`
     width: 40%;
     padding: 20px;
     @media (min-width: 768px) {
-        width: 30%;
+        width: 31%;
         padding: 1%;
     }
 `;
@@ -30,15 +31,29 @@ const ProductDescription = styled.div`
     p:last-of-type {
         text-transform: capitalize;
     }
+    h4 {
+        display: block;
+        padding-right: 60px;
+        position: relative;
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+        }
+    }
 `;
 
-export default function Product({ id, title, description, image, category }) {
+export default function Product({ title, description, image, category }) {
     return (
-        <ProductItem key={id}>
+        <ProductItem>
             <ProductImage src={image} alt={description} />
             <ProductDescription>
                 <h4>
                     <strong>{title}</strong>
+                    <span>
+                        <IoIosHeartEmpty />
+                    </span>
                 </h4>
                 <p>{description}</p>
                 <p>{category}</p>

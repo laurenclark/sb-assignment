@@ -19,7 +19,7 @@ function App() {
                     {response?.map(
                         ({ id, title, description, image, category }) => (
                             <Product
-                                id={id}
+                                key={id}
                                 title={title}
                                 description={description}
                                 image={image}
