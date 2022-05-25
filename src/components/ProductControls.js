@@ -17,15 +17,23 @@ const ProductControlBar = styled.section`
         width: 200px;
         padding: 20px;
         border-right: 1px solid #888;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background: #f1f1f1;
+        }
     }
 `;
 
-export default function ProductControls() {
+export default function ProductControls({ resultsPerPage, maxResults }) {
     return (
         <ProductControlBar>
             <div>Model View</div>
             <div>Product View</div>
-            <ProductPagination />
+            <ProductPagination
+                resultsPerPage={resultsPerPage}
+                maxResults={maxResults}
+            />
         </ProductControlBar>
     );
 }

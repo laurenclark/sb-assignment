@@ -4,16 +4,20 @@ import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
 const PaginationStyles = css`
     position: absolute;
-    right: 40px;
-    top: 17px;
+    top: 80px;
     span:first-of-type {
         margin-right: 50px;
+    }
+    @media (min-width: 768px) {
+        right: 40px;
+        top: 17px;
     }
 `;
 
 const ArrowStyles = css`
     top: 2px;
     position: relative;
+    cursor: pointer;
 `;
 
 export default function ProductPagination({

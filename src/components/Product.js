@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IoIosHeartEmpty } from "react-icons/io";
 
 const ProductItem = styled.li`
-    width: 40%;
+    width: 42%;
     padding: 20px;
     @media (min-width: 768px) {
         width: 31%;
@@ -14,10 +14,14 @@ const ProductItem = styled.li`
 const ProductImage = styled.img`
     display: block;
     max-width: 100%;
-    width: 300px;
     margin: 0 auto;
-    height: 500px;
     object-fit: contain;
+    height: 300px;
+    width: 150px;
+    @media (min-width: 768px) {
+        height: 500px;
+        width: 300px;
+    }
 `;
 
 const ProductDescription = styled.div`

@@ -9,7 +9,10 @@ import Product from "./components/Product";
 
 export default function App() {
     const productsUrl = "https://fakestoreapi.com/products";
-    const { response, error, isLoading } = useFetch(productsUrl);
+    const limit = "20";
+    const { response, error, isLoading } = useFetch(
+        `${productsUrl}?limit=${limit}`
+    );
 
     const ErrorMessage = styled.div`
         color: tomato;
@@ -23,7 +26,10 @@ export default function App() {
     return (
         <ProductPage>
             <Header />
-            <ProductControls />
+            <ProductControls
+                resultsPerPage={limit}
+                maxResults={response?.length}
+            />
             <main>
                 {error && (
                     <ErrorMessage>
