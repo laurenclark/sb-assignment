@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "styled-components/macro";
 
-function Header() {
+export default function Header() {
     const HeaderStyles = css`
         margin-top: 20px;
         h1,
@@ -29,5 +29,3 @@ function Header() {
         </header>
     );
 }
-
-export default Header;

@@ -8,9 +8,15 @@ const ProductControlBar = styled.section`
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    position: relative;
+    div:first-of-type {
+        border-left: 1px solid #888;
+    }
     div {
-        width: 100px;
+        text-align: center;
+        width: 200px;
         padding: 20px;
+        border-right: 1px solid #888;
     }
 `;
 
