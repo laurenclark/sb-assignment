@@ -7,7 +7,7 @@ import Product from "./components/Product";
 
 const ProductList = styled.ul`
     max-width: 100%;
-    width: 1400px;
+    width: 1600px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
