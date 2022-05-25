@@ -6,9 +6,9 @@ Node version: v16.13.0
 
 Clone this repo locally.
 
+`npm install`
+
 `npm run start`
-
-
 
 
 SB Assignment Web Engeneer

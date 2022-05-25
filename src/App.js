@@ -1,6 +1,7 @@
 import useFetch from "./hooks/useFetch";
 
 import styled from "styled-components";
+import { css } from "styled-components/macro";
 
 import Header from "./components/Header";
 import ProductPage from "./layouts/ProductPage";
@@ -79,6 +80,16 @@ export default function App() {
                         )}
                 </ul>
             </main>
+            <span
+                css={css`
+                    margin: 20px;
+                    display: block;
+                    text-align: center;
+                    color: grey;
+                    font-size: 30px;
+                `}>
+                <a href="https://github.com/laurenclark/sb-assignment">Repo</a>
+            </span>
         </ProductPage>
     );
 }
