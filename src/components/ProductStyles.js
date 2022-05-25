@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ProductItem = styled.li`
-    width: 38%;
-    padding: 15px;
+    width: 39%;
+    padding: 20px;
     @media (min-width: 500px) {
         width: 42%;
         padding: 20px;
