@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import ProductPage from "./layouts/ProductPage";
 import ProductControls from "./components/ProductControls";
 import Product from "./components/Product";
-import { ThreeDots } from "react-loading-icons";
+import Loader from "./components/Loader";
 
 export default function App() {
     const productsUrl = "https://fakestoreapi.com/products";
@@ -25,16 +25,6 @@ export default function App() {
         height: 40vh;
     `;
 
-    const Loader = styled.div`
-        height: 35vh;
-        display: grid;
-        place-items: center;
-        h3 {
-            color: grey;
-            font-size: 40px;
-        }
-    `;
-
     return (
         <ProductPage>
             <Header />
@@ -49,22 +39,7 @@ export default function App() {
                         try again.
                     </ErrorMessage>
                 )}
-                {isLoading && (
-                    <Loader>
-                        <ThreeDots
-                            fill="#666"
-                            fillOpacity={1}
-                            height="4em"
-                            speed={1}
-                            stroke="transparent"
-                            strokeOpacity={1}
-                            style={{
-                                margin: "0 auto"
-                            }}
-                        />
-                        <h3>Loading...</h3>
-                    </Loader>
-                )}
+                {isLoading && <Loader />}
                 <ul>
                     {!error &&
                         response?.map(
