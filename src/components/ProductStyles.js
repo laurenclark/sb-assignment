@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProductItem = styled.li`
+    overflow-x: hidden;
     width: 39%;
     padding: 20px;
     @media (min-width: 500px) {

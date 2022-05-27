@@ -25,6 +25,12 @@ export default function App() {
         height: 40vh;
     `;
 
+    const errorState = (
+        <ErrorMessage>
+            Sorry, something went wrong. Please refresh the page and try again.
+        </ErrorMessage>
+    );
+
     return (
         <ProductPage>
             <Header />
@@ -33,12 +39,7 @@ export default function App() {
                 maxResults={String(response?.length)}
             />
             <main>
-                {error && (
-                    <ErrorMessage>
-                        Sorry, something went wrong. Please refresh the page and
-                        try again.
-                    </ErrorMessage>
-                )}
+                {error && errorState}
                 {isLoading && <Loader />}
                 <ul>
                     {!error &&
